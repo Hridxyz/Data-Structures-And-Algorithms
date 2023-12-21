@@ -14,7 +14,8 @@ public class decimalBinary {
         System.out.println("binary form of " + myNum + " is " + binNum);
 
     }
-    public static void main(String args[]){
+    public static void main(String[] args){
+
         decTobin(15);
     }
 }
