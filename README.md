@@ -1,4 +1,4 @@
-# Apna College DSA Coursework
+# DSA Coursework
 
 This repository is my personal coding companion as I journey through the Data Structures and Algorithms course by Apna College. It's a growing archive of my hands-on practice with Java, tackling the foundational building blocks of computer science.
 
