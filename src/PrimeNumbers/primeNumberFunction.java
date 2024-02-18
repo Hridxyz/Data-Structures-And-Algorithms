@@ -15,7 +15,7 @@ public class primeNumberFunction {
         return true; // This will execute if no factors are found
     }
 
-    public static void main (String args[]){
+    public static void main (String[] args){
         int n=12;
         System.out.println(isPrime(n));
 

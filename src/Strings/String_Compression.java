@@ -11,12 +11,12 @@ public class String_Compression {
             }
             newStr.append(str.charAt(i));
             if(count > 1){
-                newStr.append(Integer.toString(count));
+                newStr.append(count);
             }
         }
         return newStr.toString();
     }
-    public static void main(String args[]){
+    public static void main(String[] args){
         String str = "aaabbbcccsddfffffff";
         System.out.println(compress(str));
     }

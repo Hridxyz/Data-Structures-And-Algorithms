@@ -8,7 +8,7 @@ public class substringfunction {
         }
         return substr;
     }
-    public static void main(String args[]){
+    public static void main(String[] args){
         String str="HelloPaaji";
         //java inbuilt function to write string
         System.out.println(str.substring(0,5));

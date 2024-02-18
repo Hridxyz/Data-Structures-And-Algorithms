@@ -11,7 +11,7 @@ public class Palindrome {
         System.out.println("Pallindrome");
         return true;
     }
-    public static void main (String args[]){
+    public static void main (String[] args){
         String A = "NOhjjON";
         CheckPal(A);
     }
