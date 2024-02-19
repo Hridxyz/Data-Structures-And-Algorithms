@@ -1,7 +1,7 @@
 package recursion;
 
 public class Duplicates {
-    public static void removeduplicates(String str, int idx, StringBuilder newstr, boolean map[]){
+    public static void removeduplicates(String str, int idx, StringBuilder newstr, boolean[] map){
         if (idx == str.length()){
             System.out.println(newstr);
             return;
@@ -18,6 +18,6 @@ public class Duplicates {
     }
     public static void main(String[] args){
         String str = "apnaaccolllegeee";
-        removeduplicates(str, 0, new StringBuilder(""), new boolean[26]);
+        removeduplicates(str, 0, new StringBuilder(), new boolean[26]);
     }
 }

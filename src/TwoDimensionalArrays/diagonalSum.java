@@ -2,7 +2,7 @@ package TwoDimensionalArrays;
 
 public class diagonalSum  {
 
-public static int Dsum(int matrix[][]) {
+public static int Dsum(int[][] matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.length; i++) {
         sum += matrix[i][i];
@@ -15,8 +15,8 @@ public static int Dsum(int matrix[][]) {
 }
 
 
-    public static void main(String args[]){
-        int mat[][] = {{1,2,3,4},
+    public static void main(String[] args){
+        int[][] mat = {{1,2,3,4},
                 {5,6,7,8},
                 {9,10,11,12},
                 {13,14,15,16}};
