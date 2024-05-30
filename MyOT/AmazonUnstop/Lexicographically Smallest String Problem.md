@@ -84,46 +84,66 @@ bba
 
 **Output: aab**
 
-## Java Code Implementation
+## Code Implementation
 
-```java
-import java.util.Scanner;
+Here is the C++ code implementation for solving this problem:
 
-public class LexicographicallySmallestString {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        int n = scanner.nextInt(); // Length of the string
-        int k = scanner.nextInt(); // Number of points
-        String str = scanner.next(); // Input string
-        
-        char[] charArray = str.toCharArray();
-        int points = k;
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
-        // Replace 'b' with 'a' where possible
-        for (int i = 0; i < n && points >= 2; i++) {
-            if (charArray[i] == 'b') {
-                charArray[i] = 'a';
-                points -= 2;
-            }
+using namespace std;
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+    string s;
+    cin >> s;
+
+    string s2 = s;  // Create a copy of the string
+    int k2 = k;     // Copy the points
+
+    // Replace 'b' with 'a' where possible
+    for (int j = 0; j < n && k2 >= 2; ++j) {
+        if (s2[j] == 'b') {
+            s2[j] = 'a';
+            k2 -= 2;
         }
+    }
 
-        // Use remaining points for swaps if necessary
-        for (int i = 0; i < n - 1 && points > 0; i++) {
-            for (int j = i + 1; j < n && points > 0; j++) {
-                if (charArray[i] > charArray[j]) {
-                    // Swap characters
-                    char temp = charArray[i];
-                    charArray[i] = charArray[j];
-                    charArray[j] = temp;
-                    points--;
+    vector<int> b_pos;
+    for (int i = 0; i < n; ++i) {
+        if (s[i] == 'b') {
+            b_pos.push_back(i);
+        }
+    }
+
+    int i = 0;
+    while (k2 > 0 && i < n) {
+        if (s2[i] == 'b') {
+            bool swapped = false;
+            for (int j = n - 1; j > i; --j) {
+                if (s2[j] == 'a' && k2 > 0) {
+                    swap(s2[i], s2[j]);
+                    k2--;
+                    swapped = true;
+                    break;
                 }
             }
+            if (!swapped) break;
         }
-        
-        System.out.println(new String(charArray));
-        scanner.close();
+        i++;
     }
+
+    // Final comparison
+    if (s <= s2) {
+        cout << s << endl;
+    } else {
+        cout << s2 << endl;
+    }
+
+    return 0;
 }
 ```
 
@@ -131,15 +151,18 @@ public class LexicographicallySmallestString {
 
 1. **Reading Input:**
    - Reads the length of the string \( n \) and the number of points \( k \).
-   - Reads the input string `str`.
+   - Reads the input string `s`.
 
 2. **Replacement Operations:**
    - Iterates through the string and replaces 'b' with 'a' as long as there are enough points (2 points per replacement).
 
 3. **Swapping Operations:**
-   - After replacements, if there are remaining points, iterates through the string to perform swaps to further minimize the lexicographical order of the string.
+   - Creates a list `b_pos` to store positions of 'b' characters in the original string `s`.
+   - Iterates through the string `s2` to perform swaps. For each 'b' found in `s2`, checks from the end of the string backwards to find an 'a' to swap with. Performs the swap if possible and decrements the points.
 
 4. **Output the Result:**
-   - Converts the character array back to a string and prints the result.
+   - Compares the original string `s` and the modified string `s2`. Prints the lexicographically smaller string.
 
 This approach ensures that the string is manipulated to be the smallest possible lexicographical order within the given points.
+
+---
