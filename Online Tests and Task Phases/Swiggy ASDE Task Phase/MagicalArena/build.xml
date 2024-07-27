@@ -1,0 +1,55 @@
+<project name="MagicalArena" default="test" basedir=".">
+    <!-- Set global properties for source, build, and library directories -->
+    <property name="src.dir" value="src/main/java"/>
+    <property name="test.dir" value="test/java"/>
+    <property name="build.dir" value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="test.classes.dir" value="${build.dir}/test-classes"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="reports.dir" value="${build.dir}/reports"/>
+
+    <!-- Initialize build directories -->
+    <target name="init">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${reports.dir}"/>
+    </target>
+
+    <!-- Compile source files -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false">
+            <classpath>
+                <fileset dir="${lib.dir}" includes="**/*.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Compile test files -->
+    <target name="compile-test" depends="compile">
+        <javac srcdir="${test.dir}" destdir="${test.classes.dir}" includeantruntime="false">
+            <classpath>
+                <pathelement path="${classes.dir}"/>
+                <fileset dir="${lib.dir}" includes="**/*.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Run JUnit tests using JUnit 5 Launcher -->
+    <target name="test" depends="compile-test">
+        <junitlauncher xmlns="antlib:org.apache.ant.junitlauncher" printsummary="true">
+            <classpath>
+                <pathelement path="${classes.dir}"/>
+                <pathelement path="${test.classes.dir}"/>
+                <fileset dir="${lib.dir}" includes="**/*.jar"/>
+            </classpath>
+            <testclasses outputdir="${reports.dir}">
+                <fileset dir="${test.classes.dir}" includes="**/*Test*.class"/>
+            </testclasses>
+        </junitlauncher>
+    </target>
+
+    <!-- Clean up build directories -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+</project>

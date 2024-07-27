@@ -1,0 +1,25 @@
+bfa46c7 - Hriday Bhagtani, 21 minutes ago : Final
+e10b4b2 - Hriday Bhagtani, 22 minutes ago : Finished testing, updated readme file.
+3a96b16 - Hriday Bhagtani, 3 hours ago : Made code more readible and understandable by adding description for every attributes and methods
+dc7b637 - Hriday Bhagtani, 4 hours ago : Made it more presentable
+2ad92da - Hriday Bhagtani, 4 hours ago : Simplified the code into several methods, to make easy to understand
+2f58fde - Hriday Bhagtani, 4 hours ago : Simplified StartBattle into further methods, to make it easily understandable
+43d3426 - Hriday Bhagtani, 5 hours ago : Simplified taking input into 2 methods. Also made sure user input is positive
+adedb13 - Hriday Bhagtani, 5 hours ago : Starting to make MAGICALARENA.JAVA more readable and dividing it to further simplifies methods
+482b002 - Hriday Bhagtani, 19 hours ago : Writing README file
+b727f00 - Hriday Bhagtani, 31 hours ago : doing testing
+2987315 - Hriday Bhagtani, 33 hours ago : minimum health can be 0
+86cb0e2 - Hriday Bhagtani, 2 days ago : Added input from users and printing there name
+a5be820 - Hriday Bhagtani, 2 days ago : Adding User inputs for Attributes
+0887ebf - Hriday Bhagtani, 2 days ago : Partially Completed the main file
+7dbd313 - Hriday Bhagtani, 2 days ago : Added condition of equal healths.
+d8bd79a - Hriday Bhagtani, 2 days ago : Added Rounds addressing
+38ab43c - Hriday Bhagtani, 2 days ago : Fixed the Scope issue
+b5613fa - Hriday Bhagtani, 2 days ago : Found an issue, and Adding name in Players
+8b84762 - Hriday Bhagtani, 2 days ago : Print out Final Healths
+fc8e73f - Hriday Bhagtani, 2 days ago : Adding Ouputs
+e70113d - Hriday Bhagtani, 2 days ago : Damage Calculation
+35c1bda - Hriday Bhagtani, 2 days ago : Function to create Attack
+0f9b819 - Hriday Bhagtani, 2 days ago : Setting Getter and Setter for health, strength, and attack
+79cb9ac - Hriday Bhagtani, 2 days ago : Setting up Player class
+e2bb208 - Hriday Bhagtani, 2 days ago : Setting Up files
