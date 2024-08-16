@@ -6,7 +6,7 @@ This repository contains a detailed analysis of 24 technical questions that were
 These questions were gathered by asking friends and colleagues to recall the questions they encountered during the Online Test. This collective effort has resulted in a comprehensive set of questions that can be used for study and preparation.
 
 ## Disclaimer
-Don't refer to my answers. They are mostly wrong. Cheers!
+Don't refer to my answers. They are mostly wrong. And I didnt get placed this year, so dont refer to my answers. Cheers!
 
 ## Questions and Solutions
 
