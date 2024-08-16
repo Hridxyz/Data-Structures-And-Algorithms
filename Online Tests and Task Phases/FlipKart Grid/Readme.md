@@ -384,7 +384,8 @@ You are in the process of implementing merge sort and need to determine the stat
 - C) `[[10, 27, 12], [15, 43, 32, 7]]`
 - D) `[[10, 12, 27, 43], [2, 7, 15, 32]]`
 
-**Answer:** B
+**Answer:** Bcha
+
 
 ## Conclusion
 This repository serves as a valuable study guide for anyone preparing for technical assessments or interviews. The questions cover a broad range of topics and are designed to test various aspects of computer science knowledge.
