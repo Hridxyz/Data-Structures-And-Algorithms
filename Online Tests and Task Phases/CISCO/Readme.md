@@ -1,6 +1,6 @@
 # Technical Assessment - Comprehensive Review
 
-This repository contains a detailed analysis of 15 technical questions that were compiled by collaborating with peers who took part in a recent assessment. These questions cover various topics including programming logic, probability, and algorithms.
+This repository contains a detailed analysis of technical questions that were compiled by collaborating with peers who took part in a recent assessment. These questions cover various topics including programming logic, probability, and algorithms.
 
 ### Source of Questions
 These questions were gathered by asking friends and colleagues to recall the questions they encountered during the assessment. This collective effort has resulted in a comprehensive set of questions that can be used for study and preparation.
